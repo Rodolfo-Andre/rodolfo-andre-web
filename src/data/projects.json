@@ -1,0 +1,63 @@
+[
+  {
+    "imageURL": "/project-1.webp",
+    "nameProject": "CRUD de Mascota",
+    "descriptionProject": "Una aplicación hecha en Python utilizando el framework Flask. Dicha aplicació consiste en listar, filtrar, registrar, modificar y eliminar una determinada mascota, además de proporcionar una interfaz gráfica, también cuenta con una api documentada con swagger.",
+    "repositoryURL": {
+      "name": "flask-application",
+      "href": "https://github.com/Rodolfo-Andre/flask-application"
+    },
+    "webSite": {
+      "name": "Aplicación Flask",
+      "href": "https://flask-application-production.up.railway.app/"
+    }
+  },
+  {
+    "imageURL": "/project-2.webp",
+    "nameProject": "Makako Burger",
+    "descriptionProject": "Sitio Web básico que simula la venta de comida rápida, teniendo la posibilidad de ofrecer promociones y productos por categoría, además implementa un carrito de compra la cual almacenará los alimentos que el usuario va escogiendo según su interés.",
+    "repositoryURL": {
+      "name": "Makako_Burger",
+      "href": "https://github.com/Rodolfo-Andre/Makako_Burger"
+    }
+  },
+  {
+    "imageURL": "/project-3.webp",
+    "nameProject": "CRUD de Empleados - Front End",
+    "descriptionProject": "Una aplicación hecha en ReactJS junto con unas series de librerías para la creación de formularios como Formik, manejo de peticiones como en el caso de Axios o de diseño como Bootstrap.",
+    "repositoryURL": {
+      "name": "CRUD-API-Empleados-Frontend_ReactJS",
+      "href": "https://github.com/Rodolfo-Andre/Empleados-Frontend-ReactJS"
+    },
+    "webSite": {
+      "name": "CRUD API ReactJS",
+      "href": "https://empleados-frontend-react-js.vercel.app/"
+    }
+  },
+  {
+    "imageURL": "/project-4.webp",
+    "nameProject": "CRUD de Empleados - Back End",
+    "descriptionProject": "Aplicación hecha en Django REST framework para propocionar información paginada mediante una API, además de estar implemetada con una autenticación por json web token mediante la librería Simple JWT.",
+    "repositoryURL": {
+      "name": "CRUD-API-Empleados-Backend_Django",
+      "href": "https://github.com/Rodolfo-Andre/Empleados-Backend-Django"
+    },
+    "webSite": {
+      "name": "CRUD API Django",
+      "href": "https://empleados-backend-django-production.up.railway.app/"
+    }
+  },
+  {
+    "imageURL": "/project-5.webp",
+    "nameProject": "Ejemplo de autenticación con React y Supabase",
+    "descriptionProject": "Aplicación desarrollada con React + TypeScript que simula una autenticación ya sea por email con contraseña o por medio de aplicaciones de terceros como es el caso de Google y GitHub. La interfaz está construida por la librería MUI para una mejora en la apariencia visual.",
+    "repositoryURL": {
+      "name": "ejemplo-de-autenticacion",
+      "href": "https://github.com/Rodolfo-Andre/ejemplo-de-autenticacion"
+    },
+    "webSite": {
+      "name": "Ejemplo de autenticación",
+      "href": "https://ejemplo-de-autenticacion.vercel.app/"
+    }
+  }
+]

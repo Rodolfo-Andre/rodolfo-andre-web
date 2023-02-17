@@ -1,0 +1,59 @@
+---
+import type { Skill as ISkill } from "@scripts/types";
+import json from "@data/skills.json";
+import Skill from "./Skill.astro";
+
+const skills: ISkill[] = json;
+---
+
+<div
+  data-aos="fade-in"
+  data-aos-anchor-placement="top-center"
+  id="content-technical"
+  class="min-vh-100 flex-column justify-content-center align-items-center"
+>
+  <div>
+    <h2 class="display-2 fw-bold text-center">Conocimientos Técnicos</h2>
+
+    <div class="m-auto mb-4">
+      {
+        skills.map(({ name, level }, index) => (
+          <Skill id={index + 1} name={name} level={level} />
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  div > div > div {
+    max-width: 800px;
+  }
+</style>
+
+<script>
+  import type { Aos } from "aos";
+  import { $d } from "@scripts/utils.ts";
+  import ProgressBar from "progressbar.js";
+
+  const $skills = $d.querySelectorAll(".skill"),
+    $contentTechnical = $d.getElementById("content-technical");
+
+  $d.addEventListener("aos:in", (e: Aos.AosEvent) => {
+    if (e.detail == $contentTechnical) {
+      $skills.forEach(($skill) => {
+        const bar = new ProgressBar.Line(`#${$skill.id}`, {
+          strokeWidth: 4,
+          easing: "easeInOut",
+          duration: 1400,
+          color: "#4c0bce",
+          trailColor: "#eee",
+          trailWidth: 1,
+          svgStyle: { width: `${$skill.ariaValueNow}%`, height: "100%" },
+        });
+
+        bar.animate(1);
+      });
+    }
+  });
+</script>

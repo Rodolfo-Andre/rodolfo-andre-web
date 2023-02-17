@@ -1,0 +1,35 @@
+---
+import type { Skill } from "@scripts/types.ts";
+
+export interface Props extends Skill {
+  id: number;
+}
+
+const { id, name, level } = Astro.props,
+  levelPercent = {
+    Básico: 25,
+    Intermedio: 50,
+    Avanzado: 75,
+    Experto: 100,
+  };
+---
+
+<div class="mb-2 p-2">
+  <div class="d-flex justify-content-between fw-bold">
+    <h3>{name}</h3>
+    <h3>{level}</h3>
+  </div>
+
+  <div>
+    <div
+      id={`skill-${id}`}
+      class="skill progress rounded-0"
+      role="progressbar"
+      aria-label="Success example"
+      aria-valuenow={levelPercent[level as keyof typeof levelPercent]}
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+    </div>
+  </div>
+</div>

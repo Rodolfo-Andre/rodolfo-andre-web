@@ -1,0 +1,49 @@
+---
+import type { Project } from "@scripts/types";
+import json from "@data/projects.json";
+import ProjectCard from "@components/ProjectCard.astro";
+import Layout from "@layouts/Layout.astro";
+
+const projects: Project[] = json;
+---
+
+<Layout title="Portafolio">
+  <h2 data-aos="flip-down" class="display-2 fw-bold text-center my-4">
+    Proyectos Realizados
+  </h2>
+
+  <article>
+    {
+      projects.map(
+        (
+          { imageURL, nameProject, descriptionProject, repositoryURL, webSite },
+          index
+        ) => (
+          <ProjectCard
+            id={index + 1}
+            imageURL={imageURL}
+            nameProject={nameProject}
+            descriptionProject={descriptionProject}
+            repositoryURL={repositoryURL}
+            webSite={webSite}
+          />
+        )
+      )
+    }
+  </article>
+</Layout>
+
+<style>
+  article {
+    max-width: 800px;
+    padding: 0 2rem;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(clamp(100px, 50vw, 300px), 1fr)
+    );
+    margin-bottom: 2rem;
+  }
+</style>

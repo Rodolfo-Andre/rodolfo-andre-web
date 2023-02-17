@@ -1,0 +1,173 @@
+---
+import type { Link } from "@scripts/types";
+import json from "@data/links.json";
+
+const links: Link[] = json,
+  pathName: string = Astro.url.pathname;
+---
+
+<header class="bg-primary position-sticky top-0" style="z-index: 11;">
+  <div
+    class="d-flex justify-content-between align-items-center p-2 m-auto"
+    style="max-width: 1200px;"
+  >
+    <div class="px-2">
+      <a href="/">
+        <img src="/logo.svg" alt="rabbit" style="width: 60px; height: 60px;" />
+      </a>
+    </div>
+
+    <nav class="d-flex gap-3">
+      {
+        links.map((link) => (
+          <a
+            class="link-content position-relative fs-3 d-none d-sm-block fw-bold text-decoration-none text-white px-2"
+            href={`/${link.href}`}
+          >
+            {link.name}
+            <div
+              class={
+                pathName.match("^/" + link.href + "/?$")
+                  ? "line-active"
+                  : "line-animated"
+              }
+            />
+          </a>
+        ))
+      }
+
+      <button
+        id="btn-hamburger"
+        class="d-sm-none fs-1 bg-transparent border-0 text-white"
+        ><i class="align-middle fa-solid fa-bars"></i></button
+      >
+    </nav>
+  </div>
+
+  <div
+    id="menu-mobile"
+    class="menu-mobile position-fixed bg-primary min-vh-100 w-100 top-0"
+  >
+    <div
+      class="d-flex flex-column align-items-stretch justify-content-center min-vh-100"
+    >
+      {
+        links.map((link) => (
+          <a
+            class={`${
+              pathName.match("^/" + link.href + "/?$") ? "active" : "text-white"
+            } fw-bold text-decoration-none text-center py-3 fs-2`}
+            href={`/${link.href}`}
+          >
+            {link.name}
+          </a>
+        ))
+      }
+    </div>
+
+    <button
+      id="btn-close"
+      class="position-absolute bg-transparent p-0 d-flex border-0 text-white button-close"
+    >
+      <i class="fa-solid fa-circle-xmark"></i>
+    </button>
+  </div>
+</header>
+
+<style>
+  .active {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+  }
+
+  .line-active,
+  .line-animated {
+    background-color: var(--white-color);
+    height: 4px;
+  }
+
+  .line-animated,
+  .line-active {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transition: left linear 250ms, right linear 250ms;
+  }
+
+  .link-content:hover > .line-animated,
+  .line-active {
+    right: 0;
+    left: 0;
+  }
+
+  .button-close {
+    bottom: 64px;
+    right: 16px;
+    font-size: 40px;
+  }
+
+  .menu-mobile {
+    right: -100%;
+    z-index: 111;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  .menu-mobile.show {
+    animation-name: menuMobileShow;
+  }
+
+  .menu-mobile.hide {
+    animation-name: menuMobileHide;
+  }
+
+  @keyframes menuMobileShow {
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0%;
+    }
+  }
+
+  @keyframes menuMobileHide {
+    0% {
+      right: 0%;
+    }
+    100% {
+      right: -100%;
+    }
+  }
+</style>
+
+<script>
+  import { $d } from "@scripts/utils.ts";
+
+  const $btnHamburger = $d.getElementById("btn-hamburger"),
+    $menuMobile = $d.getElementById("menu-mobile"),
+    $btnClose = $d.getElementById("btn-close");
+
+  if ($btnHamburger && $menuMobile && $btnClose) {
+    $btnHamburger.onclick = (e) => {
+      $menuMobile.classList.contains("hide") &&
+        $menuMobile.classList.remove("hide");
+
+      $d.body.style.overflow = "hidden";
+      $menuMobile.classList.add("show");
+    };
+
+    $btnClose.onclick = (e) => {
+      $menuMobile.classList.contains("show") &&
+        $menuMobile.classList.remove("show");
+
+      $menuMobile.classList.add("hide");
+    };
+  }
+
+  $menuMobile?.addEventListener("animationend", (e) => {
+    if (e.animationName === "menuMobileHide") {
+      $d.body.style.removeProperty("overflow");
+    }
+  });
+</script>

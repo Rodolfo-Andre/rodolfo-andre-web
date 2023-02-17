@@ -1,0 +1,38 @@
+:root {
+  --bs-primary: #4c0bce;
+  --bs-secondary: #712cf9;
+  --bs-white: #f5f5f5;
+  --bs-primary-rgb: 76, 11, 206;
+  --bs-secondary-rgb: 113, 44, 249;
+  --bs-white-rgb: 245, 245, 245;
+  --primary-color: var(--bs-primary);
+  --secondary-color: var(--bs-secondary);
+  --secondary-alpha-color: rgba(113, 44, 249, 0.9);
+  --white-color: var(--bs-white);
+}
+
+*,
+*::after,
+*::before {
+  font-family: "Raleway", sans-serif;
+}
+
+.bg-secondary-alpha {
+  background-color: var(--secondary-alpha-color) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.hover-opacity-70 {
+  transition: opacity 300ms ease-in;
+}
+
+.hover-opacity-70:hover {
+  opacity: 0.7;
+}
+
+.typed-cursor {
+  font-size: calc(1.625rem + 4.5vw);
+}

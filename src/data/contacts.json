@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Ubicación",
+    "icon": "fa-solid fa-location-dot",
+    "description": "San Martín de Porres, Lima, Lima"
+  },
+  {
+    "title": "Teléfono",
+    "icon": "fa-solid fa-phone",
+    "description": "937150908 | 924022741"
+  },
+  {
+    "title": "Email",
+    "icon": "fa-regular fa-envelope",
+    "description": "racaballerov@outlook.com"
+  },
+  {
+    "title": "Github",
+    "icon": "fa-brands fa-github",
+    "link": {
+      "name": "Rodolfo Andre",
+      "href": "https://github.com/Rodolfo-Andre"
+    }
+  },
+  {
+    "title": "LinkedIn",
+    "icon": "fa-brands fa-linkedin",
+    "link": {
+      "name": "Rodolfo Andre Caballero Vilela",
+      "href": "https://www.linkedin.com/in/rodolfo-andre-caballero-vilela-82780a238/"
+    }
+  }
+]

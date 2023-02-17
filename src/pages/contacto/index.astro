@@ -1,0 +1,42 @@
+---
+import type { Contact } from "@scripts/types";
+import json from "@data/contacts.json";
+import ContactCard from "@components/ContactCard.astro";
+import Layout from "@layouts/Layout.astro";
+
+const contacts: Contact[] = json;
+---
+
+<Layout title="Contacto">
+  <h2 data-aos="fade-down" class="display-2 fw-bold text-center my-4">
+    Contacto
+  </h2>
+
+  <article data-aos="zoom-in" data-aos-delay="1000">
+    {
+      contacts.map(({ title, icon, description, link }) => (
+        <ContactCard
+          title={title}
+          icon={icon}
+          description={description}
+          link={link}
+        />
+      ))
+    }
+  </article>
+</Layout>
+
+<style>
+  article {
+    max-width: 800px;
+    padding: 0 2rem;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(clamp(100px, 50vw, 300px), 1fr)
+    );
+    margin-bottom: 2rem;
+  }
+</style>

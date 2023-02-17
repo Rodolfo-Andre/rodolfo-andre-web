@@ -1,0 +1,22 @@
+---
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Error 404" header={false}>
+  <div class="min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="p-3">
+      <h1 class="text-center display-1">Recurso no encontrado</h1>
+
+      <div class="m-auto">
+        <img class="w-100" src="/404.webp" alt="Error 404" />
+      </div>
+      <a href="/" class="fs-4">⏪ Regresar al inicio</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  div > div > div {
+    max-width: 600px;
+  }
+</style>

@@ -1,0 +1,85 @@
+---
+import type { Project } from "@scripts/types";
+
+export interface Props extends Project {
+  id: number;
+}
+
+const project: Props = Astro.props,
+  { id, imageURL, nameProject, descriptionProject } = project,
+  dataJSON: string = JSON.stringify(project);
+---
+
+<project-card
+  class="project-card"
+  data-project={dataJSON}
+  data-aos="fade-zoom-in"
+  data-aos-anchor="h2"
+  data-aos-delay={id * 600}
+>
+  <section
+    class="position-relative shadow-lg text-center"
+    role="button"
+    style={`background-image: url(${imageURL})`}
+  >
+    <div class="position-absolute p-3 bg-secondary-alpha w-100">
+      <div class="d-flex flex-column p-2 border border-white border-2">
+        <h3 class="text-white">{nameProject}</h3>
+        <p class="text-white">{descriptionProject}</p>
+      </div>
+    </div>
+  </section>
+</project-card>
+
+<style>
+  section {
+    height: 300px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    user-select: none;
+  }
+
+  section > div {
+    top: 0;
+    height: inherit;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  section:hover > div {
+    opacity: 1;
+  }
+
+  section > div > div {
+    text-align: justify;
+    height: 100%;
+  }
+
+  p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+  }
+</style>
+
+<script>
+  import { showModalCard } from "../scripts/modal.ts";
+
+  class Card extends HTMLElement {
+    constructor() {
+      super();
+
+      const project = JSON.parse(this.dataset.project as string);
+      const section = this.querySelector("section");
+
+      section &&
+        section.addEventListener("click", (e) => {
+          showModalCard(project);
+        });
+    }
+  }
+
+  customElements.define("project-card", Card);
+</script>

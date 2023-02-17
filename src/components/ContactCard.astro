@@ -1,0 +1,34 @@
+---
+import type { Contact } from "@scripts/types";
+
+export interface Props extends Contact {}
+
+const { title, icon, description, link }: Props = Astro.props;
+---
+
+<section
+  class="d-flex flex-column justify-content-center shadow-lg p-3 text-center"
+>
+  <i class:list={[icon, "display-1", "text-secondary"]}></i>
+  <h3 class="fw-bold my-4">{title}</h3>
+
+  {description && <p class="fs-4 text-break">{description}</p>}
+
+  {
+    link && (
+      <a
+        class="text-decoration-none fs-4 text-dark text-break"
+        href={link.href}
+        target="_blank"
+      >
+        {link.name}
+      </a>
+    )
+  }
+</section>
+
+<style>
+  section {
+    height: 360px;
+  }
+</style>

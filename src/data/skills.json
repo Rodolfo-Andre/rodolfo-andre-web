@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Java",
+    "level": "Intermedio"
+  },
+  {
+    "name": "HTML, CSS, JavaScript",
+    "level": "Intermedio"
+  },
+  {
+    "name": "React",
+    "level": "Intermedio"
+  },
+  {
+    "name": "Spring",
+    "level": "Básico"
+  },
+  {
+    "name": "Docker",
+    "level": "Básico"
+  },
+  {
+    "name": "Python, Flask, Django",
+    "level": "Intermedio"
+  },
+  {
+    "name": "Mysql, Sql Server",
+    "level": "Intermedio"
+  },
+  {
+    "name": "PHP",
+    "level": "Básico"
+  },
+  {
+    "name": "Angular",
+    "level": "Básico"
+  }
+]

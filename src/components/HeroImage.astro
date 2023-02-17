@@ -1,0 +1,35 @@
+<div
+  class="min-vh-100 d-flex align-items-center justify-content-center text-white"
+>
+  <div
+    class="d-flex justify-content-center align-items-center w-100 min-vh-100"
+  >
+    <div class="p-3 text-center">
+      <h1 id="title" class="d-inline display-1 fw-bolder text-center"></h1>
+    </div>
+  </div>
+</div>
+
+<style>
+  div {
+    background-image: url("/hero-image.webp");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    user-select: none;
+  }
+
+  div > div {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+</style>
+
+<script>
+  import Typed from "typed.js";
+
+  new Typed("#title", {
+    strings: ["Bienvenidos a mi sitio web"],
+    startDelay: 800,
+    typeSpeed: 100,
+  });
+</script>
