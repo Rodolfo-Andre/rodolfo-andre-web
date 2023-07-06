@@ -6,7 +6,7 @@ export interface Props extends Project {
 }
 
 const project: Props = Astro.props,
-  { id, imageURL, nameProject, descriptionProject } = project,
+  { imageURL, nameProject, descriptionProject } = project,
   dataJSON: string = JSON.stringify(project);
 ---
 
@@ -15,7 +15,7 @@ const project: Props = Astro.props,
   data-project={dataJSON}
   data-aos="fade-zoom-in"
   data-aos-anchor="h2"
-  data-aos-delay={id * 600}
+  data-aos-delay={600}
 >
   <section
     class="position-relative shadow-lg text-center"

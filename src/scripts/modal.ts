@@ -44,16 +44,17 @@ const showModalCard = ({
       aria-labelledby="modalProjectCard"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-          <div class="modal-body d-flex flex-wrap gap-3 justify-content-center align-items-center">
+          <div class="modal-header border-0">
             <button
               type="button"
-              class="btn-close position-absolute"
+              class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
-              style="top:1.5rem; right: 1rem;"></button>
-            <div>
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-wrap gap-3 justify-content-center align-items-center pt-0">
+            <div style="flex-grow: 1; text-align: center; ">
               <img
                 src="${imageURL}"
                 alt="project-image"

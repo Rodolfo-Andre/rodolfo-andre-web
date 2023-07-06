@@ -69,6 +69,11 @@ const { title, header = true }: Props = Astro.props;
   import AOS from "aos";
   import "aos/dist/aos.css";
 
+  window.addEventListener("resize", () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  });
+
   AOS.init({
     once: true,
     delay: 200,

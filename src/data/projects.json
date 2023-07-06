@@ -1,6 +1,46 @@
 [
   {
     "imageURL": "/project-1.webp",
+    "nameProject": "Sistema de Comandas - MVC",
+    "descriptionProject": "Es una aplicación web desarrollada utilizando Java y Spring Boot, y se basa en el patrón de arquitectura MVC (Modelo-Vista-Controlador). Esta solución tecnológica permite la gestión eficiente de comandas en establecimientos gastronómicos.",
+    "repositoryURL": {
+      "name": "sistema-de-comandas-mvc",
+      "href": "https://github.com/Rodolfo-Andre/sistema-de-comandas-mvc"
+    },
+    "webSite": {
+      "name": "Sistema de Comandas MVC",
+      "href": "https://project-spring.onrender.com/"
+    }
+  },
+  {
+    "imageURL": "/project-2.webp",
+    "nameProject": "Sistema de Comandas - Cliente",
+    "descriptionProject": "Aplicación desarrollado con Next.js y MUI (Material-UI) para el diseño de las interfaces gráficas. Es importante tener en cuenta que esta aplicación es únicamente el frontend y requiere un backend para funcionar correctamente. Para ello, es necesario ejecutar el proyecto 'Sistema de Comandas - Servidor'. El objetivo principal de esta aplicación es optimizar y gestionar de manera eficiente los procesos de ventas en negocios gastronómicos.",
+    "repositoryURL": {
+      "name": "sistema-de-comandas-cliente",
+      "href": "https://github.com/Rodolfo-Andre/sistema-de-comandas-cliente"
+    }
+  },
+  {
+    "imageURL": "/project-3.webp",
+    "nameProject": "Sistema de Comandas - Servidor",
+    "descriptionProject": "Desarrollado utilizando C# y ASP.NET Core, aprovechando la potencia del framework y la versatilidad de Entity Framework Core. Esta solución incluye una API que gestiona las comandas en un negocio gastronómico. La aplicación ofrece funcionalidades como autenticación y autorización. La autenticación se basa en el uso de JWT (Json Web Token), lo que permite a los usuarios autenticarse de forma segura en el sistema. Además, la autorización se realiza mediante roles, lo que permite definir diferentes niveles de acceso y permisos para los distintos usuarios del sistema.",
+    "repositoryURL": {
+      "name": "sistema-de-comandas-servidor",
+      "href": "https://github.com/Rodolfo-Andre/sistema-de-comandas-servidor"
+    }
+  },
+  {
+    "imageURL": "/project-4.webp",
+    "nameProject": "Sistema de Comandas - Móvil",
+    "descriptionProject": "Sistema móvil realizado con Kotlin. Este sistema permite una gestión eficiente de comandas y cuenta con una integración completa de tecnologías como Firebase, SQLite y un servicio REST desarrollado en Spring.",
+    "repositoryURL": {
+      "name": "sistema-de-comandas-movil",
+      "href": "https://github.com/Rodolfo-Andre/sistema-de-comandas-movil"
+    }
+  },
+  {
+    "imageURL": "/project-5.webp",
     "nameProject": "CRUD de Mascota",
     "descriptionProject": "Una aplicación hecha en Python utilizando el framework Flask. Dicha aplicació consiste en listar, filtrar, registrar, modificar y eliminar una determinada mascota, además de proporcionar una interfaz gráfica, también cuenta con una api documentada con swagger.",
     "repositoryURL": {
@@ -13,21 +53,21 @@
     }
   },
   {
-    "imageURL": "/project-2.webp",
+    "imageURL": "/project-6.webp",
     "nameProject": "Makako Burger",
     "descriptionProject": "Sitio Web básico que simula la venta de comida rápida, teniendo la posibilidad de ofrecer promociones y productos por categoría, además implementa un carrito de compra la cual almacenará los alimentos que el usuario va escogiendo según su interés.",
     "repositoryURL": {
-      "name": "Makako_Burger",
-      "href": "https://github.com/Rodolfo-Andre/Makako_Burger"
+      "name": "makako-burger",
+      "href": "https://github.com/Rodolfo-Andre/makako-burger"
     }
   },
   {
-    "imageURL": "/project-3.webp",
+    "imageURL": "/project-7.webp",
     "nameProject": "CRUD de Empleados - Front End",
     "descriptionProject": "Una aplicación hecha en ReactJS junto con unas series de librerías para la creación de formularios como Formik, manejo de peticiones como en el caso de Axios o de diseño como Bootstrap.",
     "repositoryURL": {
-      "name": "CRUD-API-Empleados-Frontend_ReactJS",
-      "href": "https://github.com/Rodolfo-Andre/Empleados-Frontend-ReactJS"
+      "name": "empleados-frontend-reactjs",
+      "href": "https://github.com/Rodolfo-Andre/empleados-frontend-reactjs"
     },
     "webSite": {
       "name": "CRUD API ReactJS",
@@ -35,12 +75,12 @@
     }
   },
   {
-    "imageURL": "/project-4.webp",
+    "imageURL": "/project-8.webp",
     "nameProject": "CRUD de Empleados - Back End",
     "descriptionProject": "Aplicación hecha en Django REST framework para propocionar información paginada mediante una API, además de estar implemetada con una autenticación por json web token mediante la librería Simple JWT.",
     "repositoryURL": {
-      "name": "CRUD-API-Empleados-Backend_Django",
-      "href": "https://github.com/Rodolfo-Andre/Empleados-Backend-Django"
+      "name": "empleados-backend-django",
+      "href": "https://github.com/Rodolfo-Andre/empleados-backend-django"
     },
     "webSite": {
       "name": "CRUD API Django",
@@ -48,7 +88,7 @@
     }
   },
   {
-    "imageURL": "/project-5.webp",
+    "imageURL": "/project-9.webp",
     "nameProject": "Ejemplo de autenticación con React y Supabase",
     "descriptionProject": "Aplicación desarrollada con React + TypeScript que simula una autenticación ya sea por email con contraseña o por medio de aplicaciones de terceros como es el caso de Google y GitHub. La interfaz está construida por la librería MUI para una mejora en la apariencia visual.",
     "repositoryURL": {

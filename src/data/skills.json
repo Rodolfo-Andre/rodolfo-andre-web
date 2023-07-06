@@ -1,23 +1,19 @@
 [
   {
-    "name": "Java",
+    "name": "Java, Spring Boot",
     "level": "Intermedio"
   },
   {
-    "name": "HTML, CSS, JavaScript",
+    "name": "C#, ASP.NET Core",
+    "level": "Intermedio"
+  },
+  {
+    "name": "HTML, CSS, JavaScript, TypeScript",
     "level": "Intermedio"
   },
   {
     "name": "React",
     "level": "Intermedio"
-  },
-  {
-    "name": "Spring",
-    "level": "Básico"
-  },
-  {
-    "name": "Docker",
-    "level": "Básico"
   },
   {
     "name": "Python, Flask, Django",
@@ -28,11 +24,19 @@
     "level": "Intermedio"
   },
   {
+    "name": "Docker",
+    "level": "Básico"
+  },
+  {
     "name": "PHP",
     "level": "Básico"
   },
   {
     "name": "Angular",
+    "level": "Básico"
+  },
+  {
+    "name": "Kotlin",
     "level": "Básico"
   }
 ]

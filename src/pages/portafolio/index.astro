@@ -8,34 +8,42 @@ const projects: Project[] = json;
 ---
 
 <Layout title="Portafolio">
-  <h2 data-aos="flip-down" class="display-2 fw-bold text-center my-4">
-    Proyectos Realizados
-  </h2>
+  <main style="padding-top: 76px;">
+    <h2 data-aos="fade-down" class="display-2 fw-bold text-center my-4">
+      Proyectos Realizados
+    </h2>
 
-  <article>
-    {
-      projects.map(
-        (
-          { imageURL, nameProject, descriptionProject, repositoryURL, webSite },
-          index
-        ) => (
-          <ProjectCard
-            id={index + 1}
-            imageURL={imageURL}
-            nameProject={nameProject}
-            descriptionProject={descriptionProject}
-            repositoryURL={repositoryURL}
-            webSite={webSite}
-          />
+    <article>
+      {
+        projects.map(
+          (
+            {
+              imageURL,
+              nameProject,
+              descriptionProject,
+              repositoryURL,
+              webSite,
+            },
+            index
+          ) => (
+            <ProjectCard
+              id={index + 1}
+              imageURL={imageURL}
+              nameProject={nameProject}
+              descriptionProject={descriptionProject}
+              repositoryURL={repositoryURL}
+              webSite={webSite}
+            />
+          )
         )
-      )
-    }
-  </article>
+      }
+    </article>
+  </main>
 </Layout>
 
 <style>
   article {
-    max-width: 800px;
+    max-width: 1200px;
     padding: 0 2rem;
     margin: auto;
     display: grid;

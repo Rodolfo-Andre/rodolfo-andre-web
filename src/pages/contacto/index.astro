@@ -8,27 +8,29 @@ const contacts: Contact[] = json;
 ---
 
 <Layout title="Contacto">
-  <h2 data-aos="fade-down" class="display-2 fw-bold text-center my-4">
-    Contacto
-  </h2>
+  <main style="padding-top: 76px;">
+    <h2 data-aos="fade-down" class="display-2 fw-bold text-center my-4">
+      Contacto
+    </h2>
 
-  <article data-aos="zoom-in" data-aos-delay="1000">
-    {
-      contacts.map(({ title, icon, description, link }) => (
-        <ContactCard
-          title={title}
-          icon={icon}
-          description={description}
-          link={link}
-        />
-      ))
-    }
-  </article>
+    <article data-aos="zoom-in" data-aos-delay="1000">
+      {
+        contacts.map(({ title, icon, description, link }) => (
+          <ContactCard
+            title={title}
+            icon={icon}
+            description={description}
+            link={link}
+          />
+        ))
+      }
+    </article>
+  </main>
 </Layout>
 
 <style>
   article {
-    max-width: 800px;
+    max-width: 1200px;
     padding: 0 2rem;
     margin: auto;
     display: grid;

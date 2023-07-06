@@ -17,6 +17,11 @@
   font-family: "Raleway", sans-serif;
 }
 
+.min-height-100vh {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
 .bg-secondary-alpha {
   background-color: var(--secondary-alpha-color) !important;
 }
